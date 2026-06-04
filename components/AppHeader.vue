@@ -56,10 +56,10 @@ const scrolled = ref(false)
 const menuOpen = ref(false)
 
 const navLinks = [
-  { href: '#about', label: 'À propos' },
-  { href: '#projects', label: 'Projets' },
-  { href: '#skills', label: 'Compétences' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/#about', label: 'À propos' },
+  { href: '/#projects', label: 'Projets' },
+  { href: '/#skills', label: 'Compétences' },
+  { href: '/#contact', label: 'Contact' },
 ]
 
 onMounted(() => {
