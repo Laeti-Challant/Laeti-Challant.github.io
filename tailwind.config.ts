@@ -20,6 +20,9 @@ export default {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
+      backgroundImage: {
+        'hero-gradient': 'linear-gradient(135deg, #fe9a66 0%, #f7d59b 35%, #764ba2 100%)',
+      },
     },
   },
 } satisfies Config
