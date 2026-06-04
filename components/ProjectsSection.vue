@@ -12,8 +12,7 @@
       </div>
 
       <div v-else-if="error" class="mt-12 p-6 bg-red-50 text-red-600 rounded-xl text-sm">
-        Impossible de charger les projets. Vérifie que l'API est démarrée sur
-        <code class="font-mono">{{ apiBaseUrl }}</code>.
+        Impossible de charger les projets. Vérifie que l'API Spring Boot est bien démarrée.
       </div>
 
       <div v-else class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -31,9 +30,6 @@
 <script setup lang="ts">
 const { getProjects } = usePortfolioApi()
 const { data, pending, error } = await getProjects()
-
-const config = useRuntimeConfig()
-const apiBaseUrl = config.public.apiBaseUrl
 
 const visibleProjects = computed(() =>
   (data.value ?? []).filter(p => p.visible)
