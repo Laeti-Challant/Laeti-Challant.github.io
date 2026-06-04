@@ -1,19 +1,16 @@
 import type { ProjectSummary, ProjectDetail, SkillCategory } from '~/types/portfolio'
 
 export function usePortfolioApi() {
-  const config = useRuntimeConfig()
-  const baseUrl = config.public.apiBaseUrl
-
   function getProjects() {
-    return useFetch<ProjectSummary[]>(`${baseUrl}/api/projects`)
+    return useFetch<ProjectSummary[]>('/api/projects')
   }
 
   function getProject(name: string) {
-    return useFetch<ProjectDetail>(`${baseUrl}/api/projects/${name}`)
+    return useFetch<ProjectDetail>(`/api/projects/${name}`)
   }
 
   function getSkills() {
-    return useFetch<SkillCategory[]>(`${baseUrl}/api/skills`)
+    return useFetch<SkillCategory[]>('/api/skills')
   }
 
   return { getProjects, getProject, getSkills }
