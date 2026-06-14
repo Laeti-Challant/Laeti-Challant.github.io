@@ -21,7 +21,7 @@
         />
         <div class="absolute inset-0 bg-black/40" />
         <div class="relative z-10 max-w-6xl mx-auto w-full px-8 pb-8">
-          <NuxtLink to="/#projects" class="text-white/80 hover:text-white text-sm font-medium transition-colors">
+          <NuxtLink to="/#projects" class="text-white/80 hover:text-white text-base font-medium transition-colors">
             ← Retour aux projets
           </NuxtLink>
           <h1 class="text-4xl font-bold text-white mt-2">{{ project.name }}</h1>
@@ -106,6 +106,15 @@
 
         </aside>
       </div>
+
+      <div class="max-w-6xl mx-auto px-8 pb-16 flex justify-center">
+        <NuxtLink
+          to="/#projects"
+          class="inline-flex items-center gap-2 px-8 py-3 rounded-lg font-semibold text-white text-base transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg back-btn"
+        >
+          ← Retour aux projets
+        </NuxtLink>
+      </div>
     </div>
   </div>
 </template>
@@ -119,6 +128,21 @@ const { data: project, pending, error } = await getProject(route.params.name as 
 
 useHead({
   title: computed(() => project.value ? `${project.value.name} · Laeti Challant` : 'Projet'),
+  meta: computed(() => {
+    if (!project.value) return []
+    const base = 'https://laeti-challant.github.io'
+    const url = `${base}/projects/${project.value.name}`
+    const description = project.value.description ?? `Détail du projet ${project.value.name}`
+    const image = project.value.screenshot ? `${base}${project.value.screenshot}` : `${base}/screenshots/portfolio-home.png`
+    return [
+      { name: 'description', content: description },
+      { property: 'og:type', content: 'article' },
+      { property: 'og:url', content: url },
+      { property: 'og:title', content: `${project.value.name} · Laeti Challant` },
+      { property: 'og:description', content: description },
+      { property: 'og:image', content: image },
+    ]
+  }),
 })
 
 const statusLabel = computed(() => {
@@ -174,5 +198,9 @@ const renderedReadme = computed(() => {
 
 .readme-content :deep(a) {
   @apply text-primary hover:underline;
+}
+
+.back-btn {
+  background: linear-gradient(135deg, #764ba2, #fe9a66);
 }
 </style>

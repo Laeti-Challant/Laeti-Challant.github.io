@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://laeti-challant.github.io/sitemap.xml
