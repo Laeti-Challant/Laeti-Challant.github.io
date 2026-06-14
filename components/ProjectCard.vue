@@ -1,12 +1,12 @@
 <template>
-  <article class="bg-white rounded-xl overflow-hidden shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex flex-col">
+  <NuxtLink :to="`/projects/${project.name}`" class="block bg-white rounded-xl overflow-hidden shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex flex-col cursor-pointer">
 
     <div class="project-thumbnail h-48 flex items-center justify-center overflow-hidden">
       <img
         v-if="project.screenshot"
         :src="project.screenshot"
         :alt="project.name"
-        class="w-full h-full object-cover"
+        class="w-full h-full object-cover object-top"
       />
       <span v-else class="text-white text-4xl font-bold opacity-40 select-none">
         {{ project.name.charAt(0).toUpperCase() }}
@@ -36,15 +36,8 @@
         </span>
       </div>
 
-      <NuxtLink
-        :to="`/projects/${project.name}`"
-        class="mt-2 text-sm font-semibold text-primary hover:underline self-start"
-      >
-        Voir le détail →
-      </NuxtLink>
-
     </div>
-  </article>
+  </NuxtLink>
 </template>
 
 <script setup lang="ts">

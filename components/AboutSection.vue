@@ -15,9 +15,12 @@
             juillet 2025.
           </p>
           <p>
-            Actuellement en formation Concepteur Développeur d'Applications
-            (niveau Bac+3), je développe mes compétences en programmation orientée
-            objet, architecture logicielle et conception d'applications web modernes.
+            J'ai récemment terminé ma formation de Concepteur Développeur
+            d'Applications (niveau Bac+3) et suis en attente de la validation
+            de mon titre. Je recherche actuellement une alternance pour intégrer
+            le mastère Développeur FullStack chez SupDeVinci Nantes, afin de
+            poursuivre ma progression vers le développement backend et les
+            applications métier.
           </p>
           <p>
             Mon parcours professionnel m'a apporté rigueur, autonomie et capacité
