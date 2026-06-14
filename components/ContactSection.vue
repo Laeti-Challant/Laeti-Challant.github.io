@@ -65,6 +65,9 @@
 </template>
 
 <script setup lang="ts">
+const config = useRuntimeConfig()
+const base = config.public.apiBaseUrl || ''
+
 const form = reactive({
   name: '',
   email: '',
@@ -79,7 +82,7 @@ async function submitForm() {
   loading.value = true
   error.value = false
   try {
-    await $fetch('/api/contact', {
+    await $fetch(`${base}/api/contact`, {
       method: 'POST',
       body: { ...form },
     })

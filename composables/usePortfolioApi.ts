@@ -1,4 +1,4 @@
-import { useFetch } from "nuxt/app";
+import { useFetch, useRuntimeConfig } from "nuxt/app";
 import type {
   ProjectSummary,
   ProjectDetail,
@@ -6,16 +6,19 @@ import type {
 } from "../types/portfolio";
 
 export function usePortfolioApi() {
+  const config = useRuntimeConfig();
+  const base = config.public.apiBaseUrl || "";
+
   function getProjects() {
-    return useFetch<ProjectSummary[]>("/api/projects");
+    return useFetch<ProjectSummary[]>(`${base}/api/projects`);
   }
 
   function getProject(name: string) {
-    return useFetch<ProjectDetail>(`/api/projects/${name}`);
+    return useFetch<ProjectDetail>(`${base}/api/projects/${name}`);
   }
 
   function getSkills() {
-    return useFetch<SkillCategory[]>("/api/skills");
+    return useFetch<SkillCategory[]>(`${base}/api/skills`);
   }
 
   return { getProjects, getProject, getSkills };
