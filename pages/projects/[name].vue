@@ -131,7 +131,7 @@ const { getProject } = usePortfolioApi()
 const { data: project, pending, error } = await getProject(route.params.name as string)
 
 useHead({
-  title: computed(() => project.value ? `${project.value.name} · Laeti Challant` : 'Projet'),
+  title: computed(() => project.value ? `${project.value.name} · Laetitia Challant` : 'Projet'),
   meta: computed(() => {
     if (!project.value) return []
     const base = 'https://laeti-challant.github.io'
@@ -142,7 +142,7 @@ useHead({
       { name: 'description', content: description },
       { property: 'og:type', content: 'article' },
       { property: 'og:url', content: url },
-      { property: 'og:title', content: `${project.value.name} · Laeti Challant` },
+      { property: 'og:title', content: `${project.value.name} · Laetitia Challant` },
       { property: 'og:description', content: description },
       { property: 'og:image', content: image },
     ]

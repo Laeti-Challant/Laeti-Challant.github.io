@@ -1,4 +1,4 @@
-# Portfolio - Laeti Challant
+# Portfolio - Laetitia Challant
 
 Portfolio professionnel présentant mes projets de développement web.
 

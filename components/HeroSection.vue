@@ -15,7 +15,7 @@
       <h1
         class="font-display font-bold text-text-dark leading-[0.98] tracking-tight text-[clamp(52px,7.2vw,104px)] mb-7"
       >
-        Laeti<br />Challant
+        Laetitia<br />Challant
       </h1>
 
       <p class="text-xl md:text-[22px] leading-snug text-text-dark/90 max-w-[480px] font-medium mb-2">
@@ -50,7 +50,7 @@
         />
         <img
           src="~/assets/images/portrait-lc-sans-bg.webp"
-          alt="Laeti Challant"
+          alt="Laetitia Challant"
           class="relative w-[280px] h-[280px] rounded-full object-cover block shadow-2xl"
         />
       </div>

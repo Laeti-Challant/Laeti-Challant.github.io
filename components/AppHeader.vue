@@ -12,7 +12,7 @@
           class="w-10 h-auto block"
         />
         <span class="font-display font-bold text-[15px] tracking-tight text-text-dark">
-          Laeti Challant
+          Laetitia Challant
         </span>
       </a>
 

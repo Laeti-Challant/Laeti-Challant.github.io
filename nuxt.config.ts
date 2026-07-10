@@ -27,7 +27,7 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      title: 'Laeti Challant - Développeuse d\'applications',
+      title: 'Laetitia Challant - Développeuse d\'applications',
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
@@ -43,16 +43,30 @@ export default defineNuxtConfig({
       meta: [
         {
           name: 'description',
-          content: 'Portfolio de Laeti Challant, développeuse fullstack en reconversion. Projets Python, Java, Angular, Nuxt. Recherche alternance mastère SupDeVinci Nantes.',
+          content: 'Portfolio de Laetitia Challant (Laeti Challant), développeuse fullstack en reconversion. Projets Python, Java, Angular, Nuxt. Recherche alternance mastère SupDeVinci Nantes.',
         },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://laeti-challant.github.io' },
-        { property: 'og:title', content: 'Laeti Challant - Développeuse d\'applications' },
-        { property: 'og:description', content: 'Portfolio de Laeti Challant, développeuse fullstack en reconversion. Projets Python, Java, Angular, Nuxt. Recherche alternance mastère SupDeVinci Nantes.' },
+        { property: 'og:title', content: 'Laetitia Challant - Développeuse d\'applications' },
+        { property: 'og:description', content: 'Portfolio de Laetitia Challant (Laeti Challant), développeuse fullstack en reconversion. Projets Python, Java, Angular, Nuxt. Recherche alternance mastère SupDeVinci Nantes.' },
         { property: 'og:image', content: 'https://laeti-challant.github.io/screenshots/portfolio-home.png' },
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'Laeti Challant - Développeuse d\'applications' },
-        { name: 'twitter:description', content: 'Portfolio de Laeti Challant, développeuse fullstack en reconversion. Projets Python, Java, Angular, Nuxt. Recherche alternance mastère SupDeVinci Nantes.' },
+        { name: 'twitter:title', content: 'Laetitia Challant - Développeuse d\'applications' },
+        { name: 'twitter:description', content: 'Portfolio de Laetitia Challant (Laeti Challant), développeuse fullstack en reconversion. Projets Python, Java, Angular, Nuxt. Recherche alternance mastère SupDeVinci Nantes.' },
+      ],
+      script: [
+        {
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            name: 'Laetitia Challant',
+            alternateName: 'Laeti Challant',
+            jobTitle: 'Développeuse d\'applications',
+            url: 'https://laeti-challant.github.io',
+            sameAs: ['https://github.com/Laeti-Challant'],
+          }),
+        },
       ],
     },
   },
