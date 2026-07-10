@@ -1,48 +1,60 @@
 <template>
-  <section class="hero-bg text-white py-20 px-8 text-center">
-    <div class="max-w-3xl mx-auto flex flex-col items-center gap-6">
-
-      <div class="flex flex-col items-center gap-4">
-        <h1 class="text-5xl font-bold tracking-tight">
-          Laeti Challant
-        </h1>
-        <p class="text-xl font-semibold leading-relaxed drop-shadow-sm">
-          Développeuse d'applications en reconversion professionnelle<br />
-          <span class="text-base font-medium">
-            Titulaire du TP DWWM · Concepteur Développeur d'Applications
-          </span>
-        </p>
+  <section
+    id="top"
+    class="px-6 md:px-10 pt-16 md:pt-24 pb-20 md:pb-24"
+  >
+    <div class="max-w-6xl mx-auto flex items-center gap-10 lg:gap-16 flex-wrap">
+    <div class="flex-1 basis-[440px] min-w-[280px]">
+      <div class="flex items-center gap-2.5 mb-6">
+        <span class="w-2 h-2 rounded-full bg-accent inline-block" />
+        <span class="text-sm font-semibold tracking-widest uppercase text-text-light">
+          Disponible pour une alternance
+        </span>
       </div>
 
-      <div class="my-2">
-        <img
-          src="~/assets/images/portrait-lc-sans-bg.webp"
-          alt="Laeti Challant"
-          class="w-44 h-44 rounded-full object-cover ring-4 ring-white/70 shadow-2xl"
-        />
-      </div>
+      <h1
+        class="font-display font-bold text-text-dark leading-[0.98] tracking-tight text-[clamp(52px,7.2vw,104px)] mb-7"
+      >
+        Laeti<br />Challant
+      </h1>
 
-      <div class="flex flex-col sm:flex-row gap-4 mt-2">
+      <p class="text-xl md:text-[22px] leading-snug text-text-dark/90 max-w-[480px] font-medium mb-2">
+        Développeuse d'applications en reconversion professionnelle.
+      </p>
+      <p class="text-base text-text-light font-medium mb-10">
+        Titulaire du TP DWWM · Concepteur Développeur d'Applications
+      </p>
+
+      <div class="flex gap-4 flex-wrap">
         <a
           href="#contact"
-          class="inline-block px-8 py-3 bg-white text-primary font-semibold rounded-lg shadow-md hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300"
+          class="inline-flex items-center gap-2 px-7 py-4 bg-text-dark text-white no-underline rounded-lg font-semibold text-[15px] transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-dark"
         >
-          Me contacter
+          Me contacter <span aria-hidden="true">→</span>
         </a>
         <a
           href="#projects"
-          class="inline-block px-8 py-3 bg-white/20 text-white font-semibold rounded-lg border border-white/50 hover:bg-white/30 hover:-translate-y-0.5 transition-all duration-300"
+          class="inline-flex items-center gap-2 px-7 py-4 bg-transparent text-text-dark no-underline rounded-lg font-semibold text-[15px] border border-border transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:text-primary"
         >
           Voir mes projets
         </a>
       </div>
+    </div>
 
+    <div class="shrink-0 mx-auto lg:mx-0">
+      <div class="relative w-[280px] h-[280px]">
+        <div class="absolute -inset-4 rounded-full border border-border" />
+        <div
+          class="absolute -top-5 -right-6 w-14 h-14 rounded-full opacity-85 animate-floatSlow"
+          style="background: linear-gradient(135deg, #764ba2, #fe9a66)"
+        />
+        <img
+          src="~/assets/images/portrait-lc-sans-bg.webp"
+          alt="Laeti Challant"
+          class="relative w-[280px] h-[280px] rounded-full object-cover block shadow-2xl"
+        />
+      </div>
+    </div>
     </div>
   </section>
 </template>
-
-<style scoped>
-.hero-bg {
-  background: linear-gradient(135deg, #fe9a66 0%, #f7d59b 35%, #764ba2 100%);
-}
-</style>

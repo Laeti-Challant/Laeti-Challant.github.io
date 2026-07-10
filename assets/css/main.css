@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cream text-text-dark font-sans;
+  }
+}
+
+@layer components {
+  /* Titre de section numéroté : <span>01</span> À propos */
+  .section-eyebrow {
+    @apply font-display text-sm font-semibold text-primary tracking-wide;
+  }
+
+  .section-title {
+    @apply font-display text-4xl md:text-5xl font-bold tracking-tight text-text-dark;
+  }
+}
+
+/* Apparition au scroll.
+   L'état masqué n'est appliqué que si le JS est actif (classe .js posée par le
+   plugin reveal.client.ts), pour que le contenu reste visible sans JavaScript. */
+html.js .reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.6s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+html.js .reveal.reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

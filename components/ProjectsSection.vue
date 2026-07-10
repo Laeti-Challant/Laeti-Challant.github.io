@@ -1,21 +1,24 @@
 <template>
-  <section id="projects" class="py-16 px-8 bg-bg-light">
+  <section id="projects" v-reveal class="bg-sand py-20 md:py-28 px-6 md:px-10">
     <div class="max-w-6xl mx-auto">
 
-      <h2 class="section-title">Projets</h2>
-      <p class="mt-4 text-text-light max-w-2xl">
+      <div class="flex items-baseline gap-4 mb-4">
+        <span class="section-eyebrow">02</span>
+        <h2 class="section-title">Projets</h2>
+      </div>
+      <p class="text-lg text-text-light max-w-xl mb-12 md:mb-14">
         Projets récupérés depuis mes dépôts GitHub via l'API portfolio.
       </p>
 
-      <div v-if="pending" class="mt-12 flex justify-center">
+      <div v-if="pending" class="flex justify-center">
         <span class="text-text-light animate-pulse">Chargement des projets...</span>
       </div>
 
-      <div v-else-if="error" class="mt-12 p-6 bg-red-50 text-red-600 rounded-xl text-sm">
+      <div v-else-if="error" class="p-6 bg-red-50 text-red-600 rounded-xl text-sm">
         Impossible de charger les projets. Vérifie que l'API Spring Boot est bien démarrée.
       </div>
 
-      <div v-else class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div v-else class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
         <ProjectCard
           v-for="project in visibleProjects"
           :key="project.name"
@@ -35,20 +38,3 @@ const visibleProjects = computed(() =>
   (data.value ?? []).filter(p => p.visible)
 )
 </script>
-
-<style scoped>
-.section-title {
-  @apply text-3xl font-bold text-text-dark relative inline-block pb-3;
-}
-
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 3rem;
-  height: 3px;
-  background: linear-gradient(90deg, #764ba2, #fe9a66);
-  border-radius: 2px;
-}
-</style>
