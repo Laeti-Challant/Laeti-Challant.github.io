@@ -1,25 +1,30 @@
 <template>
-  <section id="skills" class="py-16 px-8">
+  <section id="skills" v-reveal class="bg-cream py-20 md:py-28 px-6 md:px-10">
     <div class="max-w-6xl mx-auto">
 
-      <h2 class="section-title">Compétences</h2>
+      <div class="flex items-baseline gap-4 mb-12 md:mb-14">
+        <span class="section-eyebrow">03</span>
+        <h2 class="section-title">Compétences</h2>
+      </div>
 
-      <div v-if="pending" class="mt-12 flex justify-center">
+      <div v-if="pending" class="flex justify-center">
         <span class="text-text-light animate-pulse">Chargement des compétences...</span>
       </div>
 
-      <div v-else-if="error" class="mt-12 p-6 bg-red-50 text-red-600 rounded-xl text-sm">
+      <div v-else-if="error" class="p-6 bg-red-50 text-red-600 rounded-xl text-sm">
         Impossible de charger les compétences. Vérifie que l'API Spring Boot est bien démarrée.
       </div>
 
-      <div v-else class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div v-else class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <div
           v-for="category in data"
           :key="category.categorie"
           class="skill-card"
         >
-          <h3 class="text-base font-semibold text-primary mb-4">{{ category.categorie }}</h3>
-          <div class="flex flex-wrap gap-2">
+          <h3 class="font-display text-[15px] font-semibold text-primary mb-4 uppercase tracking-wide">
+            {{ category.categorie }}
+          </h3>
+          <div class="flex flex-wrap gap-2.5">
             <span
               v-for="skill in category.competences"
               :key="skill"
@@ -41,26 +46,15 @@ const { data, pending, error } = await getSkills()
 </script>
 
 <style scoped>
-.section-title {
-  @apply text-3xl font-bold text-text-dark relative inline-block pb-3;
-}
-
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 3rem;
-  height: 3px;
-  background: linear-gradient(90deg, #764ba2, #fe9a66);
-  border-radius: 2px;
-}
-
 .skill-card {
-  @apply bg-bg-light rounded-xl p-6 border border-border shadow-sm;
+  @apply bg-white rounded-2xl p-7 border border-[#eeece6]
+         shadow-[0_12px_28px_-14px_rgba(31,41,55,0.28)]
+         hover:-translate-y-2 hover:shadow-[0_32px_56px_-20px_rgba(31,41,55,0.4)]
+         transition-all duration-300;
 }
 
 .skill-badge {
-  @apply text-sm px-3 py-1 rounded-full bg-white border border-border text-text-dark;
+  @apply text-sm px-3.5 py-1.5 rounded-full bg-cream border border-border text-text-dark font-medium
+         transition-colors duration-200 hover:border-primary hover:text-primary;
 }
 </style>
