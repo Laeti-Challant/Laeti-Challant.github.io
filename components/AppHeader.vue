@@ -1,22 +1,26 @@
 <template>
   <header
-    class="bg-white sticky top-0 z-50 transition-shadow duration-300"
-    :class="scrolled ? 'shadow-md' : 'shadow-sm'"
+    class="sticky top-0 z-50 backdrop-blur-md bg-cream/85 transition-colors duration-300"
+    :class="scrolled ? 'border-b border-border' : 'border-b border-transparent'"
   >
-    <nav class="max-w-6xl mx-auto px-8 py-4 flex items-center justify-between">
-      <a href="/" aria-label="Accueil">
+    <div class="px-6 md:px-10">
+    <nav class="max-w-6xl mx-auto py-4 flex items-center justify-between">
+      <a href="/" aria-label="Accueil" class="flex items-center gap-2.5 no-underline">
         <img
           src="~/assets/images/logo-LC.webp"
           alt="LC"
-          class="w-28 h-auto"
+          class="w-10 h-auto block"
         />
+        <span class="font-display font-bold text-[15px] tracking-tight text-text-dark">
+          Laeti Challant
+        </span>
       </a>
 
-      <ul class="hidden md:flex items-center gap-8 list-none m-0 p-0">
+      <ul class="hidden md:flex items-center gap-9 list-none m-0 p-0">
         <li v-for="link in navLinks" :key="link.href">
           <a
             :href="link.href"
-            class="text-text-dark font-medium no-underline transition-colors duration-300 hover:text-primary"
+            class="text-text-dark font-medium text-[15px] no-underline pb-1 border-b-2 border-transparent transition-colors duration-200 hover:text-primary hover:border-primary"
           >
             {{ link.label }}
           </a>
@@ -33,10 +37,11 @@
         <span class="block w-6 h-0.5 bg-current transition-all" />
       </button>
     </nav>
+    </div>
 
     <div
       v-show="menuOpen"
-      class="md:hidden border-t border-border px-8 py-4 flex flex-col gap-4"
+      class="md:hidden border-t border-border px-6 py-4 flex flex-col gap-4 bg-cream"
     >
       <a
         v-for="link in navLinks"
@@ -64,7 +69,7 @@ const navLinks = [
 
 onMounted(() => {
   window.addEventListener('scroll', () => {
-    scrolled.value = window.scrollY > 10
+    scrolled.value = window.scrollY > 12
   })
 })
 </script>

@@ -1,20 +1,23 @@
 <template>
-  <section id="contact" class="py-16 px-8 bg-bg-light">
-    <div class="max-w-2xl mx-auto">
+  <section id="contact" v-reveal class="bg-sand py-20 md:py-28 px-6 md:px-10">
+    <div class="max-w-[620px] mx-auto">
 
-      <h2 class="section-title">Contact</h2>
-      <p class="mt-4 text-text-light">
+      <div class="flex items-baseline gap-4 mb-4">
+        <span class="section-eyebrow">04</span>
+        <h2 class="section-title">Contact</h2>
+      </div>
+      <p class="text-lg text-text-light mb-11">
         Une question, une opportunité, une collaboration ? Écris-moi directement.
       </p>
 
-      <div v-if="success" class="mt-10 p-6 rounded-lg bg-green-50 border border-green-200 text-green-800 text-sm">
+      <div v-if="success" class="p-6 rounded-lg bg-green-50 border border-green-200 text-green-800 text-sm">
         Message envoyé ! Je vous répondrai dans les meilleurs délais.
       </div>
 
-      <form v-else @submit.prevent="submitForm" class="mt-10 flex flex-col gap-5">
+      <form v-else @submit.prevent="submitForm" class="flex flex-col gap-6">
 
-        <div class="flex flex-col gap-1.5">
-          <label for="name" class="text-sm font-medium text-text-dark">Nom</label>
+        <div class="flex flex-col gap-2">
+          <label for="name" class="form-label">Nom</label>
           <input
             id="name"
             v-model="form.name"
@@ -25,8 +28,8 @@
           />
         </div>
 
-        <div class="flex flex-col gap-1.5">
-          <label for="email" class="text-sm font-medium text-text-dark">Email</label>
+        <div class="flex flex-col gap-2">
+          <label for="email" class="form-label">Email</label>
           <input
             id="email"
             v-model="form.email"
@@ -37,13 +40,13 @@
           />
         </div>
 
-        <div class="flex flex-col gap-1.5">
-          <label for="message" class="text-sm font-medium text-text-dark">Message</label>
+        <div class="flex flex-col gap-2">
+          <label for="message" class="form-label">Message</label>
           <textarea
             id="message"
             v-model="form.message"
             required
-            rows="5"
+            rows="4"
             placeholder="Votre message..."
             class="form-input resize-none"
           />
@@ -93,30 +96,20 @@ async function submitForm() {
 </script>
 
 <style scoped>
-.section-title {
-  @apply text-3xl font-bold text-text-dark relative inline-block pb-3;
-}
-
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 3rem;
-  height: 3px;
-  background: linear-gradient(90deg, #764ba2, #fe9a66);
-  border-radius: 2px;
+.form-label {
+  @apply text-xs font-semibold text-text-dark uppercase tracking-wide;
 }
 
 .form-input {
-  @apply w-full px-4 py-3 rounded-lg border border-border bg-white text-text-dark text-sm
-         focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary
+  @apply w-full bg-transparent border-0 border-b-[1.5px] border-border rounded-none
+         px-0.5 py-2.5 text-base text-text-dark
+         focus:outline-none focus:border-primary
          transition-colors duration-200;
 }
 
 .submit-btn {
-  @apply w-full py-3 px-6 rounded-lg font-semibold text-white text-sm
-         transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg;
-  background: linear-gradient(135deg, #764ba2, #fe9a66);
+  @apply mt-3 py-4 px-7 rounded-lg font-semibold text-white text-[15px] bg-text-dark
+         transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-dark
+         disabled:opacity-60 disabled:hover:translate-y-0;
 }
 </style>
