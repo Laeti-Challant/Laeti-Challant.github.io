@@ -10,7 +10,7 @@
         Une question, une opportunité, une collaboration ? Écris-moi directement.
       </p>
 
-      <div v-if="success" class="p-6 rounded-lg bg-green-50 border border-green-200 text-green-800 text-sm">
+      <div v-if="success" ref="successMessage" tabindex="-1" role="status" class="p-6 rounded-lg bg-green-50 border border-green-200 text-green-800 text-sm">
         Message envoyé ! Je vous répondrai dans les meilleurs délais.
       </div>
 
@@ -52,7 +52,7 @@
           />
         </div>
 
-        <p v-if="error" class="text-sm text-red-600">
+        <p v-if="error" role="alert" class="text-sm text-red-600">
           Une erreur est survenue. Veuillez réessayer ou me contacter par email.
         </p>
 
@@ -80,6 +80,7 @@ const form = reactive({
 const loading = ref(false)
 const success = ref(false)
 const error = ref(false)
+const successMessage = ref<HTMLElement | null>(null)
 
 async function submitForm() {
   loading.value = true
@@ -90,6 +91,8 @@ async function submitForm() {
       body: { ...form },
     })
     success.value = true
+    await nextTick()
+    successMessage.value?.focus()
   } catch {
     error.value = true
   } finally {
