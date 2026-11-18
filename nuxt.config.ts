@@ -43,16 +43,16 @@ export default defineNuxtConfig({
       meta: [
         {
           name: 'description',
-          content: 'Portfolio de Laetitia Challant (Laeti Challant), développeuse fullstack en reconversion. Projets Python, Java, Angular, Nuxt. Recherche alternance mastère SupDeVinci Nantes.',
+          content: 'Laetitia Challant (Laeti Challant), conceptrice développeuse d\'applications métier en Java et Spring Boot, 13 ans en production agroalimentaire. Recherche un CDI.',
         },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://laeti-challant.github.io' },
         { property: 'og:title', content: 'Laetitia Challant - Développeuse d\'applications' },
-        { property: 'og:description', content: 'Portfolio de Laetitia Challant (Laeti Challant), développeuse fullstack en reconversion. Projets Python, Java, Angular, Nuxt. Recherche alternance mastère SupDeVinci Nantes.' },
+        { property: 'og:description', content: 'Laetitia Challant (Laeti Challant), conceptrice développeuse d\'applications métier en Java et Spring Boot, 13 ans en production agroalimentaire. Recherche un CDI.' },
         { property: 'og:image', content: 'https://laeti-challant.github.io/screenshots/portfolio-home.png' },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: 'Laetitia Challant - Développeuse d\'applications' },
-        { name: 'twitter:description', content: 'Portfolio de Laetitia Challant (Laeti Challant), développeuse fullstack en reconversion. Projets Python, Java, Angular, Nuxt. Recherche alternance mastère SupDeVinci Nantes.' },
+        { name: 'twitter:description', content: 'Laetitia Challant (Laeti Challant), conceptrice développeuse d\'applications métier en Java et Spring Boot, 13 ans en production agroalimentaire. Recherche un CDI.' },
       ],
       script: [
         {
