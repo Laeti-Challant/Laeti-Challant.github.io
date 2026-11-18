@@ -8,7 +8,7 @@
       <div class="flex items-center gap-2.5 mb-6">
         <span class="w-2 h-2 rounded-full bg-accent inline-block" />
         <span class="text-sm font-semibold tracking-widest uppercase text-text-light">
-          Disponible pour une alternance
+          Disponible pour un CDI
         </span>
       </div>
 
@@ -19,10 +19,10 @@
       </h1>
 
       <p class="text-xl md:text-[22px] leading-snug text-text-dark/90 max-w-[480px] font-medium mb-2">
-        Développeuse d'applications en reconversion professionnelle.
+        Conceptrice développeuse d'applications métier.
       </p>
       <p class="text-base text-text-light font-medium mb-10">
-        Titulaire du TP DWWM · Concepteur Développeur d'Applications
+        Java / Spring Boot - 13 ans de terrain en production agroalimentaire
       </p>
 
       <div class="flex gap-4 flex-wrap">
