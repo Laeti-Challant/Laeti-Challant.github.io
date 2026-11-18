@@ -9,6 +9,8 @@
         v-if="project.screenshot"
         :src="project.screenshot"
         :alt="project.name"
+        loading="lazy"
+        decoding="async"
         class="w-full h-full object-cover object-top"
       />
       <span v-else class="text-white font-display text-4xl font-bold opacity-50 select-none">
