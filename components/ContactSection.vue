@@ -7,7 +7,7 @@
         <h2 class="section-title">Contact</h2>
       </div>
       <p class="text-lg text-text-light mb-11">
-        Une question, une opportunité, une collaboration ? Écris-moi directement.
+        Une question, une opportunité, une collaboration ? Écrivez-moi directement.
       </p>
 
       <div v-if="success" ref="successMessage" tabindex="-1" role="status" class="p-6 rounded-lg bg-green-50 border border-green-200 text-green-800 text-sm">
