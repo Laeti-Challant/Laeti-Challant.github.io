@@ -18,18 +18,18 @@
             juillet 2025.
           </p>
           <p>
-            J'ai récemment terminé ma formation de Concepteur Développeur
-            d'Applications (niveau Bac+3) et suis en attente de la validation
-            de mon titre. Je recherche actuellement une alternance pour intégrer
-            le mastère Développeur FullStack chez SupDeVinci Nantes, afin de
-            poursuivre ma progression vers le développement backend et les
-            applications métier.
+            J'ai obtenu mon titre professionnel de Concepteur Développeur
+            d'Applications (bac +3) en octobre 2026. Je recherche actuellement
+            un poste en CDI chez un éditeur de logiciels ou un industriel, ou en
+            tant que consultante auprès d'industriels. Je veux mettre mes
+            compétences au service d'applications métier qui améliorent le
+            quotidien des équipes de terrain.
           </p>
           <p>
             Mon parcours professionnel m'a apporté rigueur, autonomie et capacité
             à gérer des projets complexes. Ces qualités, je veux les appliquer
-            aujourd'hui au développement d'applications métier, en apportant une
-            vision métier là où les développeurs juniors n'en ont pas encore.
+            aujourd'hui au développement d'applications métier, en apportant la
+            vision métier de 13 ans de terrain.
           </p>
         </div>
 
