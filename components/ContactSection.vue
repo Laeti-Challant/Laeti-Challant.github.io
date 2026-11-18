@@ -109,7 +109,7 @@ async function submitForm() {
 
 .form-input {
   @apply w-full bg-transparent border-0 border-b-[1.5px] border-text-light rounded-none
-         px-0.5 py-2.5 text-base text-text-dark
+         px-0.5 py-2.5 text-base text-text-dark placeholder:text-text-light
          focus:outline-none focus:border-primary focus:shadow-[0_1.5px_0_0_theme(colors.primary)]
          transition-colors duration-200;
 }
