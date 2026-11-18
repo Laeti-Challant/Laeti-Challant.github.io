@@ -7,10 +7,10 @@
         <h2 class="section-title">Contact</h2>
       </div>
       <p class="text-lg text-text-light mb-11">
-        Une question, une opportunité, une collaboration ? Écris-moi directement.
+        Une question, une opportunité, une collaboration ? Écrivez-moi directement.
       </p>
 
-      <div v-if="success" class="p-6 rounded-lg bg-green-50 border border-green-200 text-green-800 text-sm">
+      <div v-if="success" ref="successMessage" tabindex="-1" role="status" class="p-6 rounded-lg bg-green-50 border border-green-200 text-green-800 text-sm">
         Message envoyé ! Je vous répondrai dans les meilleurs délais.
       </div>
 
@@ -52,11 +52,11 @@
           />
         </div>
 
-        <p v-if="error" class="text-sm text-red-600">
+        <p v-if="error" role="alert" class="text-sm text-red-600">
           Une erreur est survenue. Veuillez réessayer ou me contacter par email.
         </p>
 
-        <button type="submit" :disabled="loading" class="submit-btn">
+        <button type="submit" :aria-disabled="loading" class="submit-btn">
           <span v-if="loading">Envoi en cours...</span>
           <span v-else>Envoyer le message</span>
         </button>
@@ -80,8 +80,10 @@ const form = reactive({
 const loading = ref(false)
 const success = ref(false)
 const error = ref(false)
+const successMessage = ref<HTMLElement | null>(null)
 
 async function submitForm() {
+  if (loading.value) return
   loading.value = true
   error.value = false
   try {
@@ -90,6 +92,8 @@ async function submitForm() {
       body: { ...form },
     })
     success.value = true
+    await nextTick()
+    successMessage.value?.focus()
   } catch {
     error.value = true
   } finally {
@@ -104,15 +108,15 @@ async function submitForm() {
 }
 
 .form-input {
-  @apply w-full bg-transparent border-0 border-b-[1.5px] border-border rounded-none
-         px-0.5 py-2.5 text-base text-text-dark
-         focus:outline-none focus:border-primary
+  @apply w-full bg-transparent border-0 border-b-[1.5px] border-text-light rounded-none
+         px-0.5 py-2.5 text-base text-text-dark placeholder:text-text-light
+         focus:outline-none focus:border-primary focus:shadow-[0_1.5px_0_0_theme(colors.primary)]
          transition-colors duration-200;
 }
 
 .submit-btn {
   @apply mt-3 py-4 px-7 rounded-lg font-semibold text-white text-[15px] bg-text-dark
          transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-dark
-         disabled:opacity-60 disabled:hover:translate-y-0;
+         aria-disabled:opacity-60 aria-disabled:hover:translate-y-0 aria-disabled:cursor-not-allowed;
 }
 </style>

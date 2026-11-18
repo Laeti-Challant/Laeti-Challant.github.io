@@ -158,9 +158,9 @@ const statusLabel = computed(() => {
 
 const statusClass = computed(() => {
   if (!project.value) return ''
-  if (project.value.actif && !project.value.termine) return 'bg-emerald-500 text-white'
-  if (project.value.termine) return 'bg-blue-500 text-white'
-  return 'bg-gray-400 text-white'
+  if (project.value.actif && !project.value.termine) return 'bg-emerald-700 text-white'
+  if (project.value.termine) return 'bg-blue-700 text-white'
+  return 'bg-gray-600 text-white'
 })
 
 const renderedReadme = computed(() => {

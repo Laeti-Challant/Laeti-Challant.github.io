@@ -8,7 +8,7 @@
       <div class="flex items-center gap-2.5 mb-6">
         <span class="w-2 h-2 rounded-full bg-accent inline-block" />
         <span class="text-sm font-semibold tracking-widest uppercase text-text-light">
-          Disponible pour une alternance
+          Disponible pour un CDI
         </span>
       </div>
 
@@ -18,11 +18,11 @@
         Laetitia<br />Challant
       </h1>
 
-      <p class="text-xl md:text-[22px] leading-snug text-text-dark/90 max-w-[480px] font-medium mb-2">
-        Développeuse d'applications en reconversion professionnelle.
+      <p class="text-xl md:text-[22px] leading-snug text-text-dark/90 max-w-[540px] text-balance font-medium mb-2">
+        Conceptrice développeuse d'applications métier.
       </p>
       <p class="text-base text-text-light font-medium mb-10">
-        Titulaire du TP DWWM · Concepteur Développeur d'Applications
+        Java / Spring Boot - 13 ans de terrain en production agroalimentaire
       </p>
 
       <div class="flex gap-4 flex-wrap">
@@ -45,7 +45,7 @@
       <div class="relative w-[280px] h-[280px]">
         <div class="absolute -inset-4 rounded-full border border-border" />
         <div
-          class="absolute -top-5 -right-6 w-14 h-14 rounded-full opacity-85 animate-floatSlow"
+          class="absolute -top-5 -right-6 w-14 h-14 rounded-full opacity-85 motion-safe:animate-floatSlow"
           style="background: linear-gradient(135deg, #764ba2, #fe9a66)"
         />
         <img

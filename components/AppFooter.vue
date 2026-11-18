@@ -3,7 +3,7 @@
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
       <div class="text-center md:text-left">
         <p class="font-semibold text-[15px]">© {{ currentYear }} Laetitia Challant</p>
-        <p class="text-sm text-gray-400 mt-1">Développeuse d'applications · Mortagne-sur-Sèvre</p>
+        <p class="text-sm text-gray-400 mt-1">Conceptrice développeuse d'applications métier · Mortagne-sur-Sèvre</p>
       </div>
 
       <div class="flex items-center gap-7">
