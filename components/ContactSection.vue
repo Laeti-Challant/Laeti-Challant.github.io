@@ -56,7 +56,7 @@
           Une erreur est survenue. Veuillez réessayer ou me contacter par email.
         </p>
 
-        <button type="submit" :disabled="loading" class="submit-btn">
+        <button type="submit" :aria-disabled="loading" class="submit-btn">
           <span v-if="loading">Envoi en cours...</span>
           <span v-else>Envoyer le message</span>
         </button>
@@ -83,6 +83,7 @@ const error = ref(false)
 const successMessage = ref<HTMLElement | null>(null)
 
 async function submitForm() {
+  if (loading.value) return
   loading.value = true
   error.value = false
   try {
@@ -116,6 +117,6 @@ async function submitForm() {
 .submit-btn {
   @apply mt-3 py-4 px-7 rounded-lg font-semibold text-white text-[15px] bg-text-dark
          transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-dark
-         disabled:opacity-60 disabled:hover:translate-y-0;
+         aria-disabled:opacity-60 aria-disabled:hover:translate-y-0 aria-disabled:cursor-not-allowed;
 }
 </style>
