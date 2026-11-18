@@ -5,10 +5,10 @@
   >
     <div class="px-6 md:px-10">
     <nav class="max-w-6xl mx-auto py-4 flex items-center justify-between">
-      <a href="/" aria-label="Accueil" class="flex items-center gap-2.5 no-underline">
+      <a href="/" class="flex items-center gap-2.5 no-underline">
         <img
           src="~/assets/images/logo-LC.webp"
-          alt="LC"
+          alt=""
           class="w-10 h-auto block"
         />
         <span class="font-display font-bold text-[15px] tracking-tight text-text-dark">
