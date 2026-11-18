@@ -45,7 +45,7 @@
       <div class="relative w-[280px] h-[280px]">
         <div class="absolute -inset-4 rounded-full border border-border" />
         <div
-          class="absolute -top-5 -right-6 w-14 h-14 rounded-full opacity-85 animate-floatSlow"
+          class="absolute -top-5 -right-6 w-14 h-14 rounded-full opacity-85 motion-safe:animate-floatSlow"
           style="background: linear-gradient(135deg, #764ba2, #fe9a66)"
         />
         <img
