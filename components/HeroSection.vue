@@ -18,7 +18,7 @@
         Laetitia<br />Challant
       </h1>
 
-      <p class="text-xl md:text-[22px] leading-snug text-text-dark/90 max-w-[480px] font-medium mb-2">
+      <p class="text-xl md:text-[22px] leading-snug text-text-dark/90 max-w-[540px] text-balance font-medium mb-2">
         Conceptrice développeuse d'applications métier.
       </p>
       <p class="text-base text-text-light font-medium mb-10">
